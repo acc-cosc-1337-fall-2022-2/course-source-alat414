@@ -1,21 +1,22 @@
 #define CATCH_CONFIG_MAIN  // This tells Catch to provide a main() - only do this in one cpp file
 #include "catch.hpp"
+#include "data_types.h"
 
 TEST_CASE("Verify Test Configuration", "verification") {
 	REQUIRE(true == true);
 }
 
-/*test case echo_variable */
+TEST_CASE("Verify sum_numbers function") 
+{
+    //Tests have been run and successfully verified
+	REQUIRE(add_numbers(5, 5) == 10);
+	REQUIRE(add_numbers(10, 10) == 20);
+}
 
-/*test case add_to_double_1 with 0 as parameter*/
-
-/*test case add_to_double_1 with 1 as parameter*/
-
-/*test case add_to_double_2 with 0 as parameter*/
-
-/*test case add_to_double_2 with 1 as parameter*/
-
-/*test case char test ASCII values */
-
-/*test case string test ASCII values Joe characters are equal to 74, 111, and 101*/
-
+TEST_CASE("Test Multiply Numbers")
+{
+    //Tests have been run and successfully verified
+    REQUIRE(multiply_numbers(10) == 50);
+    REQUIRE(multiply_numbers(2) == 10);
+    REQUIRE(multiply_numbers(4) == 20); //Test case to verify main function output
+}
